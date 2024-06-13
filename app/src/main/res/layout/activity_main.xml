@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+
+    <RelativeLayout
+        android:id="@+id/layoutHome"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_with_bottom_corner"
+            android:gravity="center"
+            android:paddingVertical="24dp"
+            android:text="ROCK \n PAPER \n SCISSOR"
+            android:textColor="@color/white"
+            android:textSize="60sp" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/btnStartGame"
+            android:layout_below="@id/tvTitle"
+            android:gravity="center"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+
+                <ImageView
+                    android:id="@+id/ivRock"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_marginRight="8dp"
+                    android:background="@drawable/bg_circle"
+                    android:backgroundTint="@color/teal_700"
+                    android:padding="24dp"
+                    android:src="@drawable/ic_rock"
+                    app:tint="@color/white" />
+
+                <ImageView
+                    android:id="@+id/ivPaper"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:background="@drawable/bg_circle"
+                    android:backgroundTint="@color/teal_700"
+                    android:padding="24dp"
+                    android:src="@drawable/ic_paper"
+                    app:tint="@color/white" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/ivScissor"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:background="@drawable/bg_circle"
+                android:backgroundTint="@color/teal_700"
+                android:padding="24dp"
+                android:src="@drawable/ic_scissor"
+                app:tint="@color/white" />
+
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnStartGame"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginHorizontal="18dp"
+            android:backgroundTint="@color/teal_700"
+            android:text="Start Playing"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:cornerRadius="24dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layoutGame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+
+        <ImageView
+            android:id="@+id/ivOutput"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_above="@id/tvOutput"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/bg_circle"
+            android:backgroundTint="@color/teal_700"
+            android:padding="24dp"
+            android:src="@drawable/ic_rock"
+            app:tint="@color/white" />
+
+        <TextView
+            android:id="@+id/tvOutput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginHorizontal="24dp"
+            android:gravity="center"
+            android:text="4"
+            android:textColor="@color/black"
+            android:textSize="120sp" />
+
+        <LinearLayout
+            android:id="@+id/layoutButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/bg_with_top_corner"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingVertical="36dp">
+
+            <ImageView
+                android:id="@+id/ivHome"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="@drawable/bg_circle"
+                android:padding="16dp"
+                android:src="@drawable/ic_home"
+                app:tint="@color/teal_700" />
+
+            <ImageView
+                android:id="@+id/ivRestart"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginLeft="16dp"
+                android:background="@drawable/bg_circle"
+                android:padding="8dp"
+                android:src="@drawable/ic_restart"
+                app:tint="@color/teal_700" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
